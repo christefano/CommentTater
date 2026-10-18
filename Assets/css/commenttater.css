@@ -1,0 +1,95 @@
+.commenttater {
+    margin: 10px 0;
+}
+
+.commenttater > summary {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 0;
+    font-weight: bold;
+    list-style: none;
+}
+
+.commenttater .commenttater-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.commenttater > summary::-webkit-details-marker {
+    display: none;
+}
+
+.commenttater .commenttater-caret {
+    transition: transform 0.15s;
+}
+
+.commenttater[open] .commenttater-caret {
+    transform: rotate(180deg);
+}
+
+/* The two columns come from core's task form (task-form-container). Core caps a column at 250px, which is narrow here. */
+.commenttater-fields {
+    padding: 8px 0 4px;
+}
+
+.commenttater-fields .commenttater-column {
+    max-width: 300px;
+    min-width: 200px;
+    width: 45%;
+    max-height: none;
+    overflow: visible;
+}
+
+.commenttater-fields .commenttater-column + .commenttater-column {
+    padding-left: 24px;
+}
+
+/* The change list in a posted comment: striped, a little smaller than the comment text. */
+.commenttater-changes {
+    font-size: 0.9em;
+    margin: 16px 0;
+}
+
+.commenttater-changes p {
+    margin: 0 0 4px;
+}
+
+.commenttater-changes ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.commenttater-changes li {
+    margin: 0;
+    padding: 3px 8px;
+}
+
+.commenttater-changes li:nth-child(odd) {
+    background: rgba(127, 127, 127, 0.14);
+}
+
+.commenttater-settings fieldset {
+    margin-bottom: 18px;
+}
+
+.commenttater-settings label {
+    display: block;
+    margin: 4px 0;
+}
+
+.commenttater-choices {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    gap: 4px 20px;
+}
+
+.commenttater-choices label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
